@@ -14,11 +14,20 @@ fun main(args: Array<String>) {
 
     val vlad = Vampire("Vlad")
     println(vlad)
-    vlad.takeDamage(12)
+    vlad.takeDamage(8)
     println(vlad)
 
     val dracula = VampireKing("Dracula")
     println(dracula)
-    dracula.takeDamage(12)
-    println(dracula)
+    while (dracula.lives > 0) {
+        if (dracula.dodges()) {
+            continue
+        }
+        if (dracula.runAway()) {
+            println("Dracula run away")
+            break
+        } else {
+            dracula.takeDamage(12)
+        }
+    }
 }

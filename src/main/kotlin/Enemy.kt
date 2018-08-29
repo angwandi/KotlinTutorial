@@ -9,7 +9,7 @@ open class Enemy(val name: String, var hitPoints: Int, var lives: Int) {
             if (lives > 0) {
                 println("$name lost a life")
             } else {
-                println("No lives left, ugly troll is dead")
+                println("No lives left, $name is dead")
             }
         }
     }
