@@ -1,32 +1,24 @@
 fun main(args: Array<String>) {
-//      val uglyTroll = Troll("Ugly Troll")
-//      println(uglyTroll)
-//
-//      uglyTroll.takeDamage(30)
-//      println(uglyTroll)
-//
-//      val vlad = Vampire("Vlad")
-//      println(vlad)
-//      vlad.takeDamage(8)
-//      println(vlad)
-//
-    for (i in 1..10) {
-        val dracula = VampireKing("Dracula")
-        println(dracula)
-        while (dracula.lives > 0) {
-            if (dracula.dodges()) {
-                continue
-            }
-            if (dracula.runAway()) {
-                println("Dracula run away")
-                break
-            } else {
-                dracula.takeDamage(80)
-            }
-        }
-        println("-----------------------------")
 
-    }
+    // for (i in 1..10) {
+    val dracula = VampireKing("Dracula")
+    println(dracula)
+    dracula.lives = 0
+    do {
+        if (dracula.dodges()) {
+            dracula.lives += 1
+            continue
+        }
+        if (dracula.runAway()) {
+            println("Dracula run away")
+            break
+        } else {
+            dracula.takeDamage(80)
+        }
+    } while (dracula.lives > 0)
+    println("-------------------------------------------------")
+
+    //  }
 
 //    val conan = Player("Conan")
 //    conan.getLoot(Loot("Invisibility", LootType.ARMOR, 4.00))
