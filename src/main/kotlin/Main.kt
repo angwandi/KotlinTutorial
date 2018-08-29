@@ -33,5 +33,8 @@ fun main(args: Array<String>) {
 */
     dems.show()
 
-
+    val redPortion = Loot("Red Position", LootType.POSITION, 7.50)
+    dems.inventory.add(redPortion)
+    dems.showInventory()
+    println(dems.toString())
 }
