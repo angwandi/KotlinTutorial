@@ -1,7 +1,7 @@
 class Player(private val name: String, private var level: Int = 1, private var lives: Int = 3, private var score: Int = 0) {
     //Object of class Weapon
     var weapon: Weapon = Weapon("Fist", 1)
-    val inventory = ArrayList<Loot>()
+    private val inventory = ArrayList<Loot>()
 
     /*Show method*/
     fun show() {
@@ -18,7 +18,22 @@ class Player(private val name: String, private var level: Int = 1, private var l
             lives: $lives
             level: $level
             score: $score
-            weapon: ${weapon}"""
+            weapon: $weapon"""
+    }
+
+    //Encapsulating data
+    fun getLoot(item: Loot) {
+        inventory.add(item)
+        //Code to save the inventory goes here
+    }
+
+    fun dropLoot(item: Loot): Boolean {
+        return if (inventory.contains(item)) {
+            inventory.remove(item)
+            true
+        } else {
+            false
+        }
     }
 
     fun showInventory() {
