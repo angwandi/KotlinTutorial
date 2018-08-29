@@ -1,10 +1,6 @@
 fun main(args: Array<String>) {
     //todo Kotlin class
     val tim = Player("Tim")
-    /* println(tim.name)
-     println(tim.lives)
-     println(tim.level)
-     println(tim.score)*/
     tim.show()
 /*Instances from our Player class*/
     val louise = Player("Louise", 5)
@@ -13,4 +9,22 @@ fun main(args: Array<String>) {
     louise.show()
     dems.show()
     kris.show()
+    println(tim.weapon.name.toUpperCase())
+    println(tim.weapon.damageInflicted)
+
+    val axe = Weapon("Axe", 12)
+    kris.weapon = axe
+    println(kris.weapon.name)
+    println(axe.name)
+
+    axe.damageInflicted = 24
+    println(axe.damageInflicted)
+    println(kris.weapon.damageInflicted)
+
+    dems.weapon = Weapon("Sword", 10)
+    println(dems.weapon.name)
+
+    dems.weapon = Weapon("Spear", 14)
+    println(dems.weapon.name)
+
 }
