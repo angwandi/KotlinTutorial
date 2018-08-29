@@ -8,6 +8,9 @@ class Player(private val name: String, private var level: Int = 1, private var l
             name: $name
             lives: $lives
             level: $level
-            score: $score""")
+            score: $score
+            weapon: ${weapon.name}
+            damage: ${weapon.damageInflicted}
+            """)
     }
 }

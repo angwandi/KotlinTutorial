@@ -22,9 +22,16 @@ fun main(args: Array<String>) {
     println(kris.weapon.damageInflicted)
 
     dems.weapon = Weapon("Sword", 10)
-    println(dems.weapon.name)
+    dems.show()
+
+    louise.weapon = dems.weapon
+    louise.show()
 
     dems.weapon = Weapon("Spear", 14)
+/*
     println(dems.weapon.name)
+*/
+    dems.show()
+
 
 }
