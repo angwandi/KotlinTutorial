@@ -39,7 +39,7 @@ fun main(args: Array<String>) {
     dems.showInventory()
 
     dems.getLoot((Loot("Ring of protection", LootType.RING, 40.25)))
-    dems.getLoot((Loot("Invisibility Position", LootType.POSITION, 35.95)))
+    dems.getLoot((Loot("Invisibility Potion", LootType.POSITION, 35.95)))
     dems.showInventory()
 
     if (dems.dropLoot(redPortion)) {
@@ -47,6 +47,7 @@ fun main(args: Array<String>) {
     } else {
         println("you don't have a ${redPortion.name}")
     }
+
     val bluePotion = Loot("Blue Potion", LootType.POSITION, 56.36)
     if (dems.dropLoot(bluePotion)) {
         dems.showInventory()
@@ -54,6 +55,9 @@ fun main(args: Array<String>) {
         println("you don't have ${bluePotion.name}")
     }
 
-    println(dems.toString())
-
+    if (dems.dropLoot("Invisibility Potion")) {
+        dems.showInventory()
+    } else {
+        println("You don't have an Invisibility potion")
+    }
 }
