@@ -36,9 +36,26 @@ class Player(private val name: String, private var level: Int = 1, private var l
         }
     }
 
+    /*fun dropLoot(name: String): Boolean {
+        for (item in inventory) {
+            if (item.name == name) {
+                inventory.remove(item)
+                return true
+            }
+        }
+        return false
+    }*/
+
     fun dropLoot(name: String): Boolean {
-        println("$name will be dropped")
-        return inventory.removeIf { it.name == name }
+        var result = false
+        for (item in inventory) {
+            if (item.name == name) {
+                inventory.remove(item)
+                result = true
+                break
+            }
+        }
+        return result
     }
 
     fun showInventory() {
