@@ -18,13 +18,14 @@ class Player(private val name: String, private var level: Int = 1, private var l
             lives: $lives
             level: $level
             score: $score
-            weapon: ${weapon}
-            """
+            weapon: ${weapon}"""
     }
 
     fun showInventory() {
         println("$name's Inventory")
-        println(inventory[0])
+        for (item in inventory) {
+            println(item)
+        }
         println("=============================")
     }
 }
