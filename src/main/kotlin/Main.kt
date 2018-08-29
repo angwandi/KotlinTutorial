@@ -1,34 +1,17 @@
 fun main(args: Array<String>) {
-    //todo if statement
-    /* val lives = 0
-     var isGameOver = (lives < 1)
-     println(isGameOver)
- *//*Condition is an expression that evaluates a true or false (@ isGameOver) *//*
-    if (isGameOver) {
-        println("Game over!")
-    } else {
-        print("You're still alive!")
-    }*/
+    //todo Kotlin class
+    val tim = Player("Tim")
+    /* println(tim.name)
+     println(tim.lives)
+     println(tim.level)
+     println(tim.score)*/
+    tim.show()
 
-    println("How old are you: ")
-    val age = readLine()!!.toInt()
-    println("age is $age")
-/*When from if automatic Kotlin */
-    val message: String
-    message = when {
-        age < 18 -> "You are too young to vote"
-        age == 100 -> "Congratulations"
-        else -> "You can vote"
-    }
-    println(message)
+    val louise = Player("Louise", 5)
+    louise.show()
 
-    /*  message = if (age < 18) {
-          "You are too young to vote"
-      } else if (age == 100) {
-          "Congratulations"
-      } else {
-          "You can vote"
-      }
-      println(message)*/
-
+    val dems = Player("Dems", 4, 8)
+    val kris = Player("Kris", 2, 5, 1000)
+    dems.show()
+    kris.show()
 }
