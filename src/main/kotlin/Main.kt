@@ -61,4 +61,16 @@ fun main(args: Array<String>) {
     for (i in 10 downTo 0 step 2) { //reversed order todo
         println("$i squared is ${i * i}")
     }
+    println("##############################")
+    //Todo Challenge
+    /*Create a loop that prints out all the numbers from 0 to 100 that are divisible by both
+    * 3 and 5
+    * Hints: include if inside the loop and modulus operator which returns the remainder
+    * after dividing one number into another.
+    * */
+    for (value in 3..100 step 3) {
+        if (value % 5 == 0) {
+            println(value)
+        }
+    }
 }
